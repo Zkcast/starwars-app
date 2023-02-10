@@ -29,15 +29,15 @@
 .people_container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 // Pagination
 
 .custom-button {
   width: 60px;
-  height: 60px;
-  font-size: 76px;
+  height: 6px;
+  font-size: 70px;
   color: #ffffff;
   background-color: rgba(255, 255, 255, 0);
   border-radius: 100%;
@@ -56,10 +56,11 @@
 
 .btn-dark {
   padding: .375rem .75rem;
-  font-size: 1rem;
+  font-size: 0.7rem;
   font-weight: 400;
   line-height: 1.5;
   color: #fff;
+  border-width: 1px;
   background-color: #8a8a8a;
   border-radius: .5rem;
   transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;

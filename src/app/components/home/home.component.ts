@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.setPeople(this.currentPage)
-    this.PeopleService.getPeople$.subscribe((res: any) => { this.people = res.results; console.log(res.results) })
+    this.PeopleService.getPeople$.subscribe((res: any) => { this.people = res.results })
   }
 
 
