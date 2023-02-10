@@ -17,4 +17,10 @@ export class HttpmethodsService {
     );
   }
 
+  getPeopleById(id: string): Observable<Character> {
+    return this.http.get<Character>(
+      `https://swapi.dev/api/people/${id}`
+    )
+  }
+
 }
