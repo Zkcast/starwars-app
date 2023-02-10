@@ -1,0 +1,33 @@
+<div *ngIf="!allPeople" class="logo">
+    <img width='200px' src="../../../assets/starwars_logo.webp" />
+</div>
+
+<div *ngIf="!allPeople" class="seall_div">
+    <button (click)="setAllPeople()" class="btn-dark">{{loading ? 'Loading...' : 'See all characters'}}</button>
+</div>
+
+<div *ngIf="allPeople" class="seall_div">
+    <button (click)="cleanPeople()" class="btn-dark">{{loading ? 'Loading...' : 'Clean characters'}}</button>
+</div>
+
+<div class="centraldiv">
+
+    <div *ngIf="!allPeople">
+        <button [ngClass]="allowBack() ? 'custom-button' : 'custom-button disabled'"
+            (click)="handlePrevious()">&#x2039;</button>
+    </div>
+
+    <div *ngIf="!allPeople" class="people_container">
+        <app-card *ngFor="let character of people" [character]="character"></app-card>
+    </div>
+
+    <div *ngIf="allPeople" class="people_container">
+        <app-card *ngFor="let character of allPeople" [character]="character"></app-card>
+    </div>
+
+    <div *ngIf="!allPeople">
+        <button [ngClass]="allowFoward() ? 'custom-button' : 'custom-button disabled'" class='custom-button'
+            (click)="handleNext()">&#x203A;</button>
+    </div>
+
+</div>
